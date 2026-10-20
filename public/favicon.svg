@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <rect width="64" height="64" rx="14" fill="#24384F"/>
+  <!-- Shield shape -->
+  <path d="M32 10 C42 12 48 14 48 20 C48 35 38 48 32 54 C26 48 16 35 16 20 C16 14 22 12 32 10 Z" fill="#3A506B" stroke="#FFFFFF" stroke-width="2" stroke-linejoin="round"/>
+  <!-- Left bracket < -->
+  <path d="M28 26 L23 31 L28 36" fill="none" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Slash / -->
+  <path d="M34 24 L30 38" fill="none" stroke="#FFFFFF" stroke-width="2.2" stroke-linecap="round"/>
+  <!-- Right bracket > -->
+  <path d="M36 26 L41 31 L36 36" fill="none" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

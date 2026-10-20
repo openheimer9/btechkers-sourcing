@@ -1,0 +1,1226 @@
+/* ============================================================
+   HOMEPAGE STYLES — Btechkers Global Sourcing
+   Responsive, high-converting B2B styling across all 13 sections
+   ============================================================ */
+
+/* ── Scroll Reveal Animations ───────────────────────────────── */
+.reveal-on-scroll {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.reveal-on-scroll.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ============================================================
+   SECTION 1 — HERO
+   ============================================================ */
+.hero {
+  position: relative;
+  min-height: 88vh;
+  display: flex;
+  align-items: center;
+  background: linear-gradient(135deg, #182230 0%, #24384F 50%, #3A506B 100%);
+  color: var(--color-white);
+  padding: 6.5rem 0 5.5rem;
+  overflow: hidden;
+}
+
+.hero__bg-lines {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.hero__svg-lines {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-line {
+  stroke-dasharray: 4 4;
+  animation: lineDash 25s linear infinite;
+}
+
+@keyframes lineDash {
+  to { stroke-dashoffset: -100; }
+}
+
+.hero__img-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.hero__img-overlay::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(24, 34, 48, 0.95) 0%,
+    rgba(36, 56, 79, 0.88) 55%,
+    rgba(45, 125, 154, 0.45) 100%
+  );
+}
+
+.hero__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transform: scale(1.05);
+  filter: saturate(1.1);
+}
+
+.hero__container {
+  position: relative;
+  z-index: 2;
+}
+
+.hero__content {
+  max-width: 780px;
+}
+
+.hero__eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-heading);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #79B8D1;
+  background: rgba(121, 184, 209, 0.14);
+  padding: 0.4rem 1rem;
+  border-radius: var(--radius-full);
+  border: 1px solid rgba(121, 184, 209, 0.3);
+  margin-bottom: 1.5rem;
+  backdrop-filter: blur(8px);
+}
+
+.hero__title {
+  font-size: clamp(2.35rem, 5vw, 3.85rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1.15;
+  color: var(--color-white);
+  margin-bottom: 1.5rem;
+  text-shadow: 0 2px 20px rgba(0, 0, 0, 0.35);
+}
+
+.hero__lead {
+  font-size: clamp(1.05rem, 2vw, 1.25rem);
+  line-height: 1.65;
+  color: rgba(255, 255, 255, 0.92);
+  margin-bottom: 1.25rem;
+  font-weight: 400;
+  max-width: 720px;
+}
+
+.hero__supporting {
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.78);
+  margin-bottom: 2.25rem;
+  line-height: 1.65;
+  border-left: 3px solid #79B8D1;
+  padding-left: 1.25rem;
+  max-width: 680px;
+}
+
+.hero__supporting strong {
+  color: var(--color-white);
+  font-weight: 600;
+}
+
+.hero__ctas {
+  display: flex;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.hero__scroll {
+  position: absolute;
+  bottom: 1.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  color: rgba(255, 255, 255, 0.5);
+  animation: bounce 2s infinite;
+  z-index: 2;
+  pointer-events: none;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% { transform: translateX(-50%) translateY(0); }
+  40% { transform: translateX(-50%) translateY(-8px); }
+  60% { transform: translateX(-50%) translateY(-4px); }
+}
+
+/* ============================================================
+   SECTION 2 — TRUST BAR
+   ============================================================ */
+.trust-bar {
+  background-color: var(--color-white);
+  border-bottom: 1px solid rgba(58, 80, 107, 0.1);
+  padding: 2.5rem 0;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+  position: relative;
+  z-index: 5;
+}
+
+.trust-bar__list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.trust-bar__item {
+  text-align: center;
+  position: relative;
+  padding: 0.5rem 1rem;
+}
+
+.trust-bar__item:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  right: -1rem;
+  top: 15%;
+  height: 70%;
+  width: 1px;
+  background-color: rgba(58, 80, 107, 0.12);
+}
+
+.trust-bar__value {
+  display: block;
+  font-family: var(--font-heading);
+  font-size: clamp(1.85rem, 3.2vw, 2.6rem);
+  font-weight: 800;
+  color: var(--color-slate-blue);
+  line-height: 1.1;
+  margin-bottom: 0.35rem;
+  letter-spacing: -0.02em;
+}
+
+.trust-bar__label {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--color-muted-grey);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  line-height: 1.35;
+}
+
+/* ============================================================
+   SECTION 3 — SERVICES
+   ============================================================ */
+.services-section {
+  background-color: var(--color-white);
+}
+
+.services-section__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.75rem;
+  margin-bottom: 3rem;
+}
+
+.service-card {
+  background: var(--color-white);
+  border-radius: var(--radius-lg);
+  border: 1px solid rgba(58, 80, 107, 0.12);
+  padding: 2.25rem 2rem;
+  display: flex;
+  flex-direction: column;
+  transition: all var(--transition-base);
+  height: 100%;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+  border-color: rgba(45, 125, 154, 0.3);
+}
+
+.service-card__icon-wrap {
+  width: 54px;
+  height: 54px;
+  border-radius: var(--radius-md);
+  background-color: var(--color-pale-blue-grey);
+  color: var(--color-slate-blue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+  transition: all var(--transition-fast);
+}
+
+.service-card:hover .service-card__icon-wrap {
+  background-color: var(--color-slate-blue);
+  color: var(--color-white);
+  transform: scale(1.05);
+}
+
+.service-card__title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--color-dark-text);
+  margin-bottom: 0.75rem;
+  line-height: 1.35;
+}
+
+.service-card__desc {
+  font-size: 0.9375rem;
+  line-height: 1.65;
+  color: var(--color-muted-grey);
+  margin-bottom: 1.75rem;
+  flex-grow: 1;
+}
+
+.service-card__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-weight: 600;
+  font-size: 0.9375rem;
+  color: var(--color-slate-blue);
+  transition: all var(--transition-fast);
+  margin-top: auto;
+}
+
+.service-card__link:hover {
+  gap: 0.65rem;
+  color: var(--color-accent-dark);
+}
+
+.services-section__cta {
+  text-align: center;
+}
+
+/* ============================================================
+   SECTION 4 — INDUSTRIES
+   ============================================================ */
+.industries-section {
+  background-color: var(--color-light-bg);
+}
+
+.industries-section__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-bottom: 2.5rem;
+}
+
+.industry-card {
+  background: var(--color-white);
+  border-radius: var(--radius-lg);
+  border: 1px solid rgba(58, 80, 107, 0.1);
+  overflow: hidden;
+  transition: all var(--transition-base);
+  display: flex;
+  flex-direction: column;
+  box-shadow: var(--shadow-sm);
+}
+
+.industry-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+  border-color: rgba(45, 125, 154, 0.3);
+}
+
+.industry-card__img-wrap {
+  height: 200px;
+  width: 100%;
+  position: relative;
+  background-color: var(--color-pale-blue-grey);
+  overflow: hidden;
+}
+
+.industry-card__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.industry-card:hover .industry-card__img {
+  transform: scale(1.06);
+}
+
+.industry-card__icon-badge {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: 42px;
+  height: 42px;
+  border-radius: var(--radius-md);
+  background: rgba(24, 34, 48, 0.85);
+  backdrop-filter: blur(6px);
+  color: #79B8D1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.industry-card__body {
+  padding: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.industry-card__title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--color-dark-text);
+  margin-bottom: 0.65rem;
+  line-height: 1.3;
+}
+
+.industry-card__desc {
+  font-size: 0.925rem;
+  line-height: 1.6;
+  color: var(--color-muted-grey);
+  margin-bottom: 1.25rem;
+  flex-grow: 1;
+}
+
+.industry-card__markets {
+  display: flex;
+  gap: 0.45rem;
+  flex-wrap: wrap;
+  margin-bottom: 1.5rem;
+}
+
+.industry-card__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--color-slate-blue);
+  transition: gap var(--transition-fast);
+  margin-top: auto;
+}
+
+.industry-card__link:hover {
+  gap: 0.6rem;
+  color: var(--color-deep-navy);
+}
+
+.industries-section__note {
+  text-align: center;
+  margin: 2rem auto 2.5rem;
+  max-width: 680px;
+  font-size: 0.975rem;
+  color: var(--color-muted-grey);
+}
+
+.industries-section__note-link {
+  color: var(--color-slate-blue);
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+.industries-section__note-link:hover {
+  color: var(--color-deep-navy);
+}
+
+.industries-section__cta {
+  text-align: center;
+}
+
+/* ============================================================
+   SECTION 5 — GLOBAL NETWORK
+   ============================================================ */
+.global-network-section {
+  background: linear-gradient(135deg, #182230 0%, #24384F 100%);
+  color: var(--color-white);
+  padding: 6.5rem 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.global-network__map-wrap {
+  position: relative;
+  margin-bottom: 2.5rem;
+  width: 100%;
+}
+
+.world-map {
+  width: 100%;
+}
+
+.world-map__svg {
+  width: 100%;
+  height: auto;
+  max-height: 480px;
+  display: block;
+}
+
+.map-connection-line {
+  animation: dash 30s linear infinite;
+}
+
+@keyframes dash {
+  to { stroke-dashoffset: -100; }
+}
+
+.map-marker-group {
+  outline: none;
+  cursor: pointer;
+}
+
+.map-pulse {
+  animation: pulse-dot 2s cubic-bezier(0.2, 0.8, 0.2, 1) infinite;
+  transform-origin: center;
+}
+
+@keyframes pulse-dot {
+  0% { r: 1.5; opacity: 0.8; }
+  100% { r: 6; opacity: 0; }
+}
+
+.global-network__mobile-list {
+  display: none;
+}
+
+.global-network__legend {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  padding: 1.25rem 2rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: var(--radius-full);
+  margin: 0 auto 2.5rem;
+  max-width: 780px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.85);
+  font-weight: 500;
+}
+
+.legend-item__dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.global-network__cta {
+  text-align: center;
+}
+
+/* ============================================================
+   SECTION 6 — WHY BTECHKERS
+   ============================================================ */
+.why-section {
+  background-color: var(--color-white);
+}
+
+.why-section__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+
+.benefit-card {
+  background: var(--color-light-bg);
+  border-radius: var(--radius-lg);
+  border: 1px solid rgba(58, 80, 107, 0.08);
+  padding: 1.85rem 1.5rem;
+  transition: all var(--transition-base);
+  display: flex;
+  flex-direction: column;
+}
+
+.benefit-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+  border-color: rgba(45, 125, 154, 0.3);
+  background: var(--color-white);
+}
+
+.benefit-card__icon {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-md);
+  background-color: var(--color-accent-light);
+  color: var(--color-accent-dark);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.25rem;
+  transition: all var(--transition-fast);
+}
+
+.benefit-card:hover .benefit-card__icon {
+  background-color: var(--color-accent);
+  color: var(--color-white);
+}
+
+.benefit-card__title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 0.6rem;
+  color: var(--color-dark-text);
+  line-height: 1.3;
+}
+
+.benefit-card__desc {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: var(--color-muted-grey);
+}
+
+/* ============================================================
+   SECTION 7 — SOURCING PROCESS
+   ============================================================ */
+.process-section {
+  background-color: var(--color-light-bg);
+}
+
+.process-steps {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  list-style: none;
+  padding: 0;
+  margin: 0 0 2.5rem;
+}
+
+.process-step {
+  background: var(--color-white);
+  border-radius: var(--radius-lg);
+  border: 1px solid rgba(58, 80, 107, 0.1);
+  padding: 2.25rem 2rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-base);
+}
+
+.process-step:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+  border-color: rgba(45, 125, 154, 0.3);
+}
+
+.process-step__connector {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.25rem;
+}
+
+.process-step__line {
+  display: none;
+}
+
+.process-step__title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+  color: var(--color-dark-text);
+  line-height: 1.35;
+}
+
+.process-step__desc {
+  font-size: 0.925rem;
+  line-height: 1.65;
+  color: var(--color-muted-grey);
+}
+
+.process-section__note {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  text-align: center;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--color-slate-blue);
+}
+
+/* ============================================================
+   SECTION 8 — SOURCE FROM INDIA
+   ============================================================ */
+.india-section {
+  background: linear-gradient(135deg, #24384F 0%, #3A506B 100%);
+  color: var(--color-white);
+  padding: 6.5rem 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.india-section__inner {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.india-points {
+  list-style: none;
+  padding: 0;
+  margin: 2rem 0 2.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.india-point {
+  display: flex;
+  gap: 0.875rem;
+  align-items: flex-start;
+}
+
+.india-point__icon {
+  color: #79B8D1;
+  flex-shrink: 0;
+  margin-top: 4px;
+}
+
+.india-point__title {
+  display: block;
+  font-size: 1.05rem;
+  color: var(--color-white);
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+}
+
+.india-point__desc {
+  font-size: 0.925rem;
+  color: rgba(255, 255, 255, 0.78);
+  line-height: 1.6;
+  margin: 0;
+}
+
+.india-section__image {
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  box-shadow: var(--shadow-xl);
+  height: 480px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.india-section__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ============================================================
+   SECTION 9 — CASE STUDIES
+   ============================================================ */
+.case-studies-section {
+  background-color: var(--color-white);
+}
+
+.case-studies-section__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2.5rem;
+  margin-bottom: 3rem;
+}
+
+.case-study-card {
+  background: var(--color-white);
+  border-radius: var(--radius-lg);
+  border: 1px solid rgba(58, 80, 107, 0.12);
+  overflow: hidden;
+  transition: all var(--transition-base);
+  display: flex;
+  flex-direction: column;
+  box-shadow: var(--shadow-sm);
+}
+
+.case-study-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+  border-color: rgba(45, 125, 154, 0.3);
+}
+
+.case-study-card__img-wrap {
+  height: 250px;
+  position: relative;
+  background-color: var(--color-pale-blue-grey);
+  overflow: hidden;
+}
+
+.case-study-card__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.case-study-card:hover .case-study-card__img {
+  transform: scale(1.05);
+}
+
+.case-study-card__category {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  background: rgba(24, 34, 48, 0.85);
+  backdrop-filter: blur(6px);
+  color: var(--color-white);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 0.35rem 0.85rem;
+  border-radius: var(--radius-full);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.case-study-card__body {
+  padding: 2.25rem 2rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.case-study-card__meta {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.825rem;
+  font-weight: 600;
+  color: var(--color-accent);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 0.6rem;
+}
+
+.case-study-card__title {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--color-dark-text);
+  margin-bottom: 1rem;
+  line-height: 1.35;
+}
+
+.case-study-card__overview {
+  font-size: 0.95rem;
+  line-height: 1.65;
+  color: var(--color-muted-grey);
+  margin-bottom: 1.75rem;
+  flex-grow: 1;
+}
+
+.case-study-card__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-weight: 600;
+  font-size: 0.9375rem;
+  color: var(--color-slate-blue);
+  transition: gap var(--transition-fast);
+  margin-top: auto;
+}
+
+.case-study-card__link:hover {
+  gap: 0.65rem;
+  color: var(--color-deep-navy);
+}
+
+.case-studies-section__cta {
+  text-align: center;
+}
+
+/* ============================================================
+   SECTION 10 — CLIENT TYPES
+   ============================================================ */
+.client-types-section {
+  background-color: var(--color-light-bg);
+}
+
+.client-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.client-chip {
+  background: var(--color-white);
+  border: 1.5px solid rgba(58, 80, 107, 0.15);
+  border-radius: var(--radius-full);
+  padding: 0.75rem 1.65rem;
+  font-size: 0.975rem;
+  font-weight: 600;
+  color: var(--color-slate-blue);
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-fast);
+}
+
+.client-chip:hover {
+  background: var(--color-slate-blue);
+  color: var(--color-white);
+  border-color: var(--color-slate-blue);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+/* ============================================================
+   SECTION 11 — COLLABORATION
+   ============================================================ */
+.collab-section {
+  background-color: var(--color-white);
+}
+
+.collab-section__inner {
+  background: linear-gradient(135deg, var(--color-light-bg) 0%, var(--color-pale-blue-grey) 100%);
+  border: 1px solid rgba(58, 80, 107, 0.12);
+  border-radius: var(--radius-xl);
+  padding: 4rem 3rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.collab-section__icon {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background: var(--color-white);
+  color: var(--color-slate-blue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+  box-shadow: var(--shadow-md);
+}
+
+/* ============================================================
+   SECTION 12 — FAQ
+   ============================================================ */
+.faq-section {
+  background-color: var(--color-light-bg);
+}
+
+.faq-section__container {
+  max-width: 860px;
+}
+
+.faq-section__accordion {
+  margin-bottom: 2.5rem;
+}
+
+.faq-section__cta {
+  text-align: center;
+}
+
+/* ============================================================
+   SECTION 13 — FINAL CTA
+   ============================================================ */
+.final-cta-section {
+  background: linear-gradient(135deg, #182230 0%, #24384F 100%);
+  color: var(--color-white);
+  padding: 6.5rem 0;
+  text-align: center;
+}
+
+.final-cta-section__inner {
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.final-cta-section__title {
+  font-size: clamp(2rem, 4.5vw, 2.9rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  margin-bottom: 1.25rem;
+}
+
+.final-cta-section__desc {
+  font-size: 1.125rem;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.85);
+  margin-bottom: 2.5rem;
+}
+
+.final-cta-section__ctas {
+  display: flex;
+  gap: 1.25rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* ============================================================
+   RESPONSIVE BREAKPOINTS
+   ============================================================ */
+@media (max-width: 1024px) {
+  .services-section__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .industries-section__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .why-section__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .process-steps {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .india-section__inner {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  .india-section__image {
+    height: 380px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 4.5rem 0 3.5rem;
+    min-height: auto;
+  }
+  .hero__title {
+    font-size: clamp(1.75rem, 5.5vw, 2.35rem);
+    line-height: 1.18;
+    text-wrap: balance;
+  }
+  .trust-bar__list {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.75rem 1rem;
+  }
+  .trust-bar__item:not(:last-child)::after {
+    display: none;
+  }
+  .services-section__grid,
+  .industries-section__grid,
+  .why-section__grid,
+  .process-steps,
+  .case-studies-section__grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  .global-network__map-wrap {
+    padding: 1.5rem 1rem;
+  }
+  .global-network__legend {
+    flex-direction: column;
+    align-items: flex-start;
+    border-radius: var(--radius-lg);
+    gap: 0.75rem;
+    padding: 1.25rem 1.5rem;
+  }
+  .collab-section__inner {
+    padding: 2.5rem 1.5rem;
+  }
+  .final-cta-section__ctas {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .final-cta-section__ctas .btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    padding: 3.5rem 0 2.75rem;
+  }
+  .hero__title {
+    font-size: clamp(1.55rem, 7vw, 1.95rem);
+  }
+  .hero__lead {
+    font-size: 0.95rem;
+  }
+  .hero__ctas {
+    flex-direction: column;
+    width: 100%;
+    gap: 0.75rem;
+  }
+  .hero__ctas .btn {
+    width: 100%;
+    justify-content: center;
+  }
+  .trust-bar__list {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+    text-align: center;
+  }
+  .trust-bar__stat-num {
+    font-size: 1.85rem;
+  }
+}
+
+/* ============================================================
+   DUAL BUSINESS MODELS SECTION
+   ============================================================ */
+.dual-models-section {
+  padding: 5rem 0 4rem;
+  background-color: var(--color-white);
+}
+
+.dual-models-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  margin-top: 2.5rem;
+}
+
+.dual-model-card {
+  display: flex;
+  flex-direction: column;
+  background: var(--color-pale-blue-grey, #EDF2F6);
+  border: 1px solid var(--color-border-light, #DFE6ED);
+  border-radius: 16px;
+  padding: 2.5rem 2rem;
+  position: relative;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.dual-model-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(36, 56, 79, 0.08);
+  border-color: var(--color-slate-blue);
+}
+
+.dual-model-card--highlight {
+  background: linear-gradient(180deg, #F0F6FA 0%, #FFFFFF 100%);
+  border: 2px solid var(--color-slate-blue);
+}
+
+.dual-model-badge {
+  display: inline-block;
+  align-self: flex-start;
+  font-family: var(--font-heading);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.35rem 0.85rem;
+  border-radius: 100px;
+  background: var(--color-deep-navy);
+  color: var(--color-white);
+  margin-bottom: 1.25rem;
+}
+
+.dual-model-badge--accent {
+  background: var(--color-slate-blue);
+}
+
+.dual-model-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.dual-model-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: var(--color-white);
+  color: var(--color-slate-blue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  flex-shrink: 0;
+}
+
+.dual-model-title {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--color-deep-navy);
+  margin: 0;
+  line-height: 1.3;
+}
+
+.dual-model-desc {
+  font-size: 0.95rem;
+  color: var(--color-text-secondary, #4B5565);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.dual-model-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.dual-model-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.65rem;
+  font-size: 0.875rem;
+  color: var(--color-text-primary, #182230);
+  line-height: 1.45;
+}
+
+.dual-model-list svg {
+  color: var(--color-slate-blue);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.dual-model-footer {
+  margin-top: auto;
+  padding-top: 1.25rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.06);
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.dual-model-subnote {
+  font-size: 0.8125rem;
+  color: #64748B;
+  font-style: italic;
+  margin-top: 1.75rem;
+  text-align: center;
+}
+
+@media (max-width: 860px) {
+  .dual-models-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  .dual-model-card {
+    padding: 1.75rem 1.5rem;
+  }
+}
+

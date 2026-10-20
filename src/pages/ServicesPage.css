@@ -1,0 +1,287 @@
+/* ============================================================
+   SERVICES PAGE STYLES — Btechkers Global Sourcing
+   ============================================================ */
+
+/* ── Engagement Banner ───────────────────────────────────────── */
+.engagement-banner {
+  background: linear-gradient(135deg, var(--color-light-bg) 0%, var(--color-pale-blue-grey) 100%);
+  border: 1px solid rgba(58, 80, 107, 0.12);
+  border-radius: var(--radius-xl);
+  padding: 3.5rem;
+  display: grid;
+  grid-template-columns: 1.25fr 0.75fr;
+  gap: 3.5rem;
+  align-items: center;
+  box-shadow: var(--shadow-sm);
+}
+
+.engagement-banner__text h2 {
+  font-size: clamp(1.6rem, 3vw, 2.1rem);
+  font-weight: 800;
+  margin-bottom: 1.25rem;
+  color: var(--color-dark-text);
+  line-height: 1.25;
+}
+
+.engagement-banner__text p {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: var(--color-muted-grey);
+  margin: 0;
+}
+
+.engagement-features {
+  display: flex;
+  flex-direction: column;
+  gap: 1.15rem;
+  background: var(--color-white);
+  padding: 2.25rem 2rem;
+  border-radius: var(--radius-lg);
+  border: 1px solid rgba(58, 80, 107, 0.1);
+  box-shadow: var(--shadow-md);
+}
+
+.engagement-feat-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.85rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--color-dark-text);
+  line-height: 1.5;
+}
+
+.engagement-feat-icon {
+  color: var(--color-accent);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+/* ── Service Group Section ───────────────────────────────────── */
+.service-group-section {
+  border-top: 1px solid rgba(58, 80, 107, 0.08);
+}
+
+.service-group__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 3rem;
+  gap: 2rem;
+}
+
+.service-group__title {
+  font-size: clamp(1.75rem, 3vw, 2.25rem);
+  font-weight: 800;
+  color: var(--color-dark-text);
+  margin-bottom: 0.6rem;
+  letter-spacing: -0.02em;
+}
+
+.service-group__subtitle {
+  font-size: 1.05rem;
+  color: var(--color-muted-grey);
+  max-width: 680px;
+  line-height: 1.65;
+  margin: 0;
+}
+
+.service-group__count {
+  font-family: var(--font-heading);
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: var(--color-slate-blue);
+  background: var(--color-pale-blue-grey);
+  padding: 0.4rem 1rem;
+  border-radius: var(--radius-full);
+  white-space: nowrap;
+  align-self: flex-start;
+}
+
+/* ── Service Cards Grid (matching JSX .service-cards-grid) ───── */
+.service-cards-grid,
+.services-list-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.service-detail-card {
+  background: var(--color-white);
+  border-radius: var(--radius-lg);
+  border: 1px solid rgba(58, 80, 107, 0.12);
+  padding: 2.25rem 2rem;
+  display: flex;
+  flex-direction: column;
+  transition: all var(--transition-base);
+  box-shadow: var(--shadow-sm);
+  position: relative;
+  height: 100%;
+}
+
+.service-detail-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+  border-color: rgba(45, 125, 154, 0.3);
+}
+
+.service-detail-card__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.25rem;
+}
+
+.service-detail-card__icon {
+  width: 52px;
+  height: 52px;
+  border-radius: var(--radius-md);
+  background-color: var(--color-pale-blue-grey);
+  color: var(--color-slate-blue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--transition-fast);
+}
+
+.service-detail-card:hover .service-detail-card__icon {
+  background-color: var(--color-slate-blue);
+  color: var(--color-white);
+  transform: scale(1.05);
+}
+
+.service-detail-card__num {
+  font-family: var(--font-heading);
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: rgba(58, 80, 107, 0.25);
+  letter-spacing: 0.05em;
+}
+
+.service-detail-card__title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--color-dark-text);
+  margin-bottom: 0.75rem;
+  line-height: 1.35;
+}
+
+.service-detail-card__short {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--color-slate-blue);
+  margin-bottom: 0.875rem;
+  line-height: 1.5;
+}
+
+.service-detail-card__body {
+  font-size: 0.925rem;
+  line-height: 1.65;
+  color: var(--color-muted-grey);
+  margin-bottom: 1.75rem;
+  flex-grow: 1;
+}
+
+.service-detail-card__footer {
+  padding-top: 1.25rem;
+  border-top: 1px solid rgba(58, 80, 107, 0.08);
+  margin-top: auto;
+}
+
+.service-detail-card__action {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.925rem;
+  font-weight: 600;
+  color: var(--color-slate-blue);
+  transition: gap var(--transition-fast);
+}
+
+.service-detail-card__action:hover {
+  gap: 0.65rem;
+  color: var(--color-deep-navy);
+}
+
+/* ── Compliance Note ─────────────────────────────────────────── */
+.compliance-box {
+  background: var(--color-white);
+  border: 1px solid rgba(58, 80, 107, 0.12);
+  border-radius: var(--radius-xl);
+  padding: 2.75rem 3rem;
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+  box-shadow: var(--shadow-sm);
+}
+
+.compliance-box__icon {
+  width: 58px;
+  height: 58px;
+  border-radius: var(--radius-md);
+  background: var(--color-pale-blue-grey);
+  color: var(--color-slate-blue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.compliance-box__content h3 {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: var(--color-dark-text);
+  margin-bottom: 0.75rem;
+}
+
+.compliance-box__content p {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: var(--color-muted-grey);
+  margin: 0;
+}
+
+/* ── Services Final CTA ──────────────────────────────────────── */
+.services-cta-box {
+  max-width: 760px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* ── Responsive adjustments ──────────────────────────────────── */
+@media (max-width: 1024px) {
+  .service-cards-grid,
+  .services-list-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .engagement-banner {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    padding: 2.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .service-cards-grid,
+  .services-list-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  .service-group__header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+  .compliance-box {
+    flex-direction: column;
+    padding: 2rem 1.5rem;
+    gap: 1.25rem;
+  }
+  .engagement-banner {
+    padding: 2rem 1.5rem;
+  }
+  .engagement-features {
+    padding: 1.75rem 1.25rem;
+  }
+}

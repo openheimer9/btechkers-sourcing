@@ -1,0 +1,463 @@
+/* ============================================================
+   SOURCE FROM INDIA PAGE STYLES — Btechkers Global Sourcing
+   ============================================================ */
+
+.india-sectors-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.india-sector-card {
+  background: var(--color-white);
+  border-radius: var(--radius-lg);
+  border: 1px solid rgba(58, 80, 107, 0.12);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: all var(--transition-base);
+  box-shadow: var(--shadow-sm);
+}
+
+.india-sector-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+  border-color: rgba(45, 125, 154, 0.3);
+}
+
+.india-sector-card__media {
+  height: 200px;
+  position: relative;
+  overflow: hidden;
+  background-color: var(--color-pale-blue-grey);
+}
+
+.india-sector-card__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.india-sector-card:hover .india-sector-card__img {
+  transform: scale(1.05);
+}
+
+.india-sector-card__icon {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  width: 46px;
+  height: 46px;
+  border-radius: var(--radius-md);
+  background: rgba(24, 34, 48, 0.85);
+  backdrop-filter: blur(6px);
+  color: #79B8D1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.india-sector-card__body {
+  padding: 2rem 2.25rem 2.25rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.india-sector-card h3 {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: var(--color-dark-text);
+  margin-bottom: 0.75rem;
+}
+
+.india-sector-card p {
+  font-size: 0.95rem;
+  line-height: 1.65;
+  color: var(--color-muted-grey);
+  margin-bottom: 1.25rem;
+}
+
+.india-sector-features {
+  list-style: disc;
+  padding-left: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  color: var(--color-muted-grey);
+}
+
+/* Gujarat Box */
+.gujarat-box {
+  background: var(--color-white);
+  border-radius: var(--radius-xl);
+  border: 1px solid rgba(58, 80, 107, 0.12);
+  padding: 3rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.gujarat-box h2 {
+  font-size: 1.85rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+}
+
+.gujarat-box p {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  margin-bottom: 2rem;
+  max-width: 860px;
+}
+
+.gujarat-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+.gujarat-point {
+  display: flex;
+  gap: 0.875rem;
+  align-items: flex-start;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--color-muted-grey);
+  background: var(--color-light-bg);
+  padding: 1.25rem 1.5rem;
+  border-radius: var(--radius-md);
+}
+
+.gujarat-point svg {
+  flex-shrink: 0;
+  margin-top: 3px;
+}
+
+.gujarat-point strong {
+  color: var(--color-dark-text);
+  display: block;
+  margin-bottom: 0.25rem;
+}
+
+/* Verification split */
+.verification-split {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 3.5rem;
+  align-items: center;
+}
+
+.verification-text h2 {
+  font-size: 1.85rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+}
+
+.verification-text p {
+  font-size: 1rem;
+  line-height: 1.7;
+  margin-bottom: 1.25rem;
+}
+
+.verification-checklist {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.verification-checklist li {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--color-dark-text);
+}
+
+.verification-checklist svg {
+  color: var(--color-slate-blue);
+  flex-shrink: 0;
+}
+
+.v-stat-card {
+  background: var(--color-light-bg);
+  border: 1px solid rgba(58, 80, 107, 0.15);
+  border-radius: var(--radius-xl);
+  padding: 3rem 2.5rem;
+  text-align: center;
+}
+
+.v-stat-icon {
+  color: var(--color-slate-blue);
+  margin: 0 auto 1.25rem;
+}
+
+.v-stat-title {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: var(--color-dark-text);
+  margin-bottom: 0.75rem;
+}
+
+.v-stat-desc {
+  font-size: 0.95rem;
+  line-height: 1.65;
+  color: var(--color-muted-grey);
+}
+
+/* Trade Agreements Section */
+.trade-agreements-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2rem;
+  margin-bottom: 2.5rem;
+  flex-wrap: wrap;
+}
+
+.trade-review-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 0.45rem 1rem;
+  border-radius: var(--radius-full);
+  font-size: 0.8125rem;
+  color: #79B8D1;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.agreement-filter-bar {
+  display: flex;
+  gap: 0.625rem;
+  flex-wrap: wrap;
+  margin-bottom: 2.5rem;
+}
+
+.filter-btn {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: rgba(255, 255, 255, 0.8);
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius-full);
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.filter-btn:hover {
+  background: rgba(255, 255, 255, 0.15);
+  color: var(--color-white);
+}
+
+.filter-btn.active {
+  background: #79B8D1;
+  color: var(--color-deep-navy);
+  border-color: #79B8D1;
+}
+
+.agreements-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.75rem;
+  margin-bottom: 3rem;
+}
+
+.agreement-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: var(--radius-lg);
+  padding: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  backdrop-filter: blur(6px);
+}
+
+.agreement-card__top {
+  display: flex;
+  align-items: center;
+  gap: 0.875rem;
+  margin-bottom: 0.75rem;
+}
+
+.agreement-card__flag {
+  font-size: 2rem;
+  line-height: 1;
+}
+
+.agreement-card__title-box {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.agreement-card__country {
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: var(--color-white);
+  line-height: 1.2;
+}
+
+.agreement-card__type-tag {
+  background: rgba(255, 255, 255, 0.15);
+  color: #79B8D1;
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 0.15rem 0.45rem;
+  border-radius: 4px;
+}
+
+.agreement-card__name {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 0.75rem;
+  line-height: 1.4;
+}
+
+.agreement-card__status-wrap {
+  margin-bottom: 1rem;
+}
+
+.agreement-status-pill {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 0.25rem 0.65rem;
+  border-radius: var(--radius-full);
+  border: 1px solid;
+}
+
+.agreement-card__desc {
+  font-size: 0.875rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.75);
+  margin-bottom: 1rem;
+}
+
+.agreement-card__relevance {
+  font-size: 0.825rem;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.85);
+  margin-bottom: 1rem;
+  flex-grow: 1;
+  background: rgba(0, 0, 0, 0.15);
+  padding: 0.75rem;
+  border-radius: var(--radius-sm);
+}
+
+.agreement-card__relevance strong {
+  color: #79B8D1;
+}
+
+.agreement-card__warning {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  background: rgba(245, 158, 11, 0.15);
+  border: 1px solid rgba(245, 158, 11, 0.3);
+  color: #FCD34D;
+  padding: 0.65rem 0.85rem;
+  border-radius: var(--radius-sm);
+  font-size: 0.775rem;
+  line-height: 1.4;
+  margin-bottom: 1rem;
+}
+
+.agreement-card__warning svg {
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.agreement-card__footer {
+  padding-top: 0.875rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.agreement-card__official-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #79B8D1;
+  transition: color var(--transition-fast);
+}
+
+.agreement-card__official-link:hover {
+  color: var(--color-white);
+  text-decoration: underline;
+}
+
+/* Trade disclaimer */
+.trade-disclaimer-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(245, 158, 11, 0.3);
+  border-left: 4px solid #F59E0B;
+  border-radius: var(--radius-md);
+  padding: 1.75rem;
+  display: flex;
+  gap: 1.25rem;
+  align-items: flex-start;
+}
+
+.trade-disclaimer-icon {
+  color: #F59E0B;
+  flex-shrink: 0;
+  margin-top: 0.25rem;
+}
+
+.trade-disclaimer-card h4 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--color-white);
+  margin-bottom: 0.35rem;
+}
+
+.trade-disclaimer-card p {
+  font-size: 0.875rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.8);
+  margin: 0;
+}
+
+/* India CTA */
+.india-cta-box {
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+.india-cta-actions {
+  display: flex;
+  gap: 1.25rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 1024px) {
+  .india-sectors-grid,
+  .gujarat-grid,
+  .verification-split {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .agreements-cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .agreements-cards-grid {
+    grid-template-columns: 1fr;
+  }
+  .gujarat-box {
+    padding: 2rem 1.5rem;
+  }
+}

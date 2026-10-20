@@ -1,0 +1,255 @@
+/* ============================================================
+   CONTACT PAGE STYLES — Btechkers Global Sourcing
+   ============================================================ */
+
+/* ── Developer Setup Guidance Banner ─────────────────────── */
+.contact-setup-banner {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  background-color: #FEF3C7;
+  border: 1px solid #F59E0B;
+  border-radius: var(--radius-md);
+  padding: 1.25rem 1.5rem;
+  margin-bottom: 2.5rem;
+  color: #92400E;
+  font-size: 0.9rem;
+  line-height: 1.55;
+}
+
+.contact-setup-icon {
+  color: #D97706;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.contact-setup-banner code {
+  background: rgba(0, 0, 0, 0.08);
+  padding: 0.15rem 0.4rem;
+  border-radius: 4px;
+  font-family: monospace;
+  font-size: 0.85em;
+}
+
+.contact-setup-banner p {
+  margin: 0.25rem 0 0;
+  color: #78350F;
+}
+
+/* ── Two-Column Layout (Left: Info & Process, Right: Form) ── */
+.contact-layout {
+  display: grid;
+  grid-template-columns: 380px 1fr;
+  gap: 3.5rem;
+  align-items: start;
+}
+
+/* ── Left Column: Contact Info ───────────────────────────── */
+.contact-info-column {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.contact-card {
+  background: var(--color-white);
+  border-radius: var(--radius-lg);
+  border: 1px solid rgba(58, 80, 107, 0.12);
+  padding: 2rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.contact-card h3 {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--color-dark-text);
+  margin-bottom: 0.5rem;
+}
+
+.contact-card-sub {
+  font-size: 0.875rem;
+  line-height: 1.55;
+  color: var(--color-muted-grey);
+  margin-bottom: 1.5rem;
+}
+
+.contact-channel-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.contact-channel-item {
+  display: flex;
+  align-items: center;
+  gap: 0.875rem;
+}
+
+.contact-channel-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: var(--radius-md);
+  background: var(--color-pale-blue-grey);
+  color: var(--color-slate-blue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.contact-channel-icon.bg-whatsapp {
+  background: #DCFCE7;
+  color: #15803D;
+}
+
+.contact-channel-label {
+  display: block;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-weight: 700;
+  color: var(--color-muted-grey);
+  margin-bottom: 0.15rem;
+}
+
+.contact-channel-val {
+  font-size: 0.925rem;
+  font-weight: 600;
+  color: var(--color-dark-text);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+  word-break: break-all;
+}
+
+.contact-channel-val:hover {
+  color: var(--color-slate-blue);
+  text-decoration: underline;
+}
+
+.contact-whatsapp-btn {
+  width: 100%;
+  margin-bottom: 1.25rem;
+  background-color: #25D366;
+  color: #FFFFFF;
+  border-color: #25D366;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.85rem 1.25rem;
+  border-radius: var(--radius-md);
+  text-decoration: none;
+  transition: background-color var(--transition-fast), transform var(--transition-fast);
+}
+
+.contact-whatsapp-btn:hover {
+  background-color: #1EBE5D;
+  color: #FFFFFF;
+  transform: translateY(-1px);
+}
+
+.response-time-badge {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--color-light-bg);
+  padding: 0.75rem 1rem;
+  border-radius: var(--radius-sm);
+  font-size: 0.8125rem;
+  color: var(--color-muted-grey);
+  border: 1px solid rgba(58, 80, 107, 0.08);
+}
+
+.response-time-badge svg {
+  color: var(--color-slate-blue);
+  flex-shrink: 0;
+}
+
+/* ── Process Explanation (Next Steps) ─────────────────────── */
+.next-steps-list {
+  list-style: decimal;
+  padding-left: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.15rem;
+  font-size: 0.875rem;
+  line-height: 1.6;
+  color: var(--color-muted-grey);
+}
+
+.next-steps-list strong {
+  color: var(--color-dark-text);
+  display: block;
+  margin-bottom: 0.2rem;
+}
+
+/* ── Commercial Confidentiality Note ─────────────────────── */
+.confidentiality-aside {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  background: #F8FAFC;
+  border-left: 3px solid var(--color-slate-blue);
+}
+
+.confidentiality-icon {
+  color: var(--color-slate-blue);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.confidentiality-aside h4 {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--color-dark-text);
+  margin-bottom: 0.35rem;
+}
+
+.confidentiality-aside p {
+  font-size: 0.825rem;
+  line-height: 1.5;
+  color: var(--color-muted-grey);
+  margin: 0;
+}
+
+/* ── Right Column: Form Header ───────────────────────────── */
+.contact-form-column {
+  min-width: 0;
+}
+
+.contact-form-header {
+  margin-bottom: 2rem;
+}
+
+.contact-form-header h2 {
+  font-size: 1.75rem;
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+  color: var(--color-dark-text);
+}
+
+.contact-form-header p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--color-muted-grey);
+  margin: 0;
+}
+
+/* ── Responsive ─────────────────────────────────────────── */
+@media (max-width: 1024px) {
+  .contact-layout {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  /* On tablets/mobile, keep form prominent or stack in logical reading order */
+  .contact-info-column {
+    order: 2;
+  }
+
+  .contact-form-column {
+    order: 1;
+  }
+}

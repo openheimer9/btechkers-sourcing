@@ -1,0 +1,582 @@
+/* ============================================================
+   INDUSTRIES PAGE STYLES — Btechkers Global Sourcing
+   Naming: BEM-ish — block__element--modifier
+   ============================================================ */
+
+/* ── Hero line break (show only on wider viewports) ─────────── */
+.industries-hero-break {
+  display: none;
+}
+
+@media (min-width: 640px) {
+  .industries-hero-break {
+    display: block;
+  }
+}
+
+/* ============================================================
+   FEATURED INDUSTRIES (Primary Sectors)
+   ============================================================ */
+
+.featured-industries-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 3.5rem;
+}
+
+/* ── Row layout: image-left by default ───────────────────────── */
+.featured-industry-row {
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  gap: 3rem;
+  align-items: center;
+  background: var(--color-white);
+  border-radius: var(--radius-xl);
+  border: 1px solid rgba(58, 80, 107, 0.11);
+  padding: 2.5rem;
+  box-shadow: var(--shadow-sm);
+  transition: box-shadow var(--transition-base), border-color var(--transition-base);
+}
+
+.featured-industry-row:hover {
+  box-shadow: var(--shadow-md);
+  border-color: rgba(58, 80, 107, 0.22);
+}
+
+/* ── Even rows: image on the right ──────────────────────────── */
+.featured-industry-row--reversed {
+  grid-template-columns: 1.1fr 1fr;
+}
+
+.featured-industry-row--reversed .featured-industry-row__media {
+  order: 2;
+}
+
+.featured-industry-row--reversed .featured-industry-row__content {
+  order: 1;
+}
+
+/* ── Media column ────────────────────────────────────────────── */
+.featured-industry-row__media {
+  position: relative;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  /* Fixed height ensures consistent aspect ratio */
+  height: 400px;
+  background: var(--color-pale-blue-grey);
+  flex-shrink: 0;
+}
+
+.featured-industry-row__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform var(--transition-slow);
+}
+
+.featured-industry-row:hover .featured-industry-row__img {
+  transform: scale(1.03);
+}
+
+/* ── Sourcing market pills overlaid on image ─────────────────── */
+.featured-industry-markets {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(0deg, rgba(24, 34, 48, 0.92) 0%, rgba(24, 34, 48, 0) 100%);
+  padding: 2rem 1.25rem 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.market-tag-label {
+  font-family: var(--font-heading);
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.6);
+  white-space: nowrap;
+  margin-right: 0.25rem;
+}
+
+.market-tag-pill {
+  background: rgba(255, 255, 255, 0.18);
+  color: var(--color-white);
+  font-family: var(--font-heading);
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.2rem 0.6rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  white-space: nowrap;
+  letter-spacing: 0.01em;
+}
+
+/* ── Content column ──────────────────────────────────────────── */
+.featured-industry-row__content {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.featured-industry-header {
+  display: flex;
+  gap: 1.125rem;
+  align-items: flex-start;
+  margin-bottom: 1.125rem;
+}
+
+.featured-industry-icon {
+  width: 54px;
+  height: 54px;
+  border-radius: var(--radius-md);
+  background: var(--color-pale-blue-grey);
+  color: var(--color-slate-blue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  border: 1px solid rgba(58, 80, 107, 0.1);
+}
+
+.featured-industry-title {
+  font-family: var(--font-heading);
+  font-size: clamp(1.375rem, 2.5vw, 1.65rem);
+  font-weight: 800;
+  color: var(--color-dark-text);
+  letter-spacing: -0.02em;
+  margin-bottom: 0.3rem;
+  line-height: 1.2;
+}
+
+.featured-industry-short {
+  font-size: 0.9375rem;
+  color: var(--color-accent);
+  font-weight: 600;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.featured-industry-desc {
+  font-size: 0.9375rem;
+  line-height: 1.75;
+  color: var(--color-muted-grey);
+  margin-bottom: 1.375rem;
+}
+
+/* ── Products checklist box ──────────────────────────────────── */
+.featured-products-box {
+  background: var(--color-light-bg);
+  border-radius: var(--radius-md);
+  padding: 1.25rem 1.5rem;
+  margin-bottom: 1.375rem;
+  border: 1px solid rgba(58, 80, 107, 0.07);
+}
+
+.featured-products-heading {
+  font-family: var(--font-heading);
+  font-size: 0.775rem;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  font-weight: 700;
+  color: var(--color-dark-text);
+  margin-bottom: 0.875rem;
+}
+
+.featured-products-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.5rem 1rem;
+}
+
+.featured-product-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  color: var(--color-muted-grey);
+  line-height: 1.4;
+}
+
+.featured-product-item svg {
+  color: var(--color-accent);
+  flex-shrink: 0;
+}
+
+/* ── Caution / compliance note (amber) ───────────────────────── */
+.industry-caution-note {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.625rem;
+  background: #FFFBEB;
+  border: 1px solid #FDE68A;
+  color: #92400E;
+  padding: 0.75rem 1rem;
+  border-radius: var(--radius-sm);
+  font-size: 0.8125rem;
+  line-height: 1.55;
+  margin-bottom: 1.375rem;
+}
+
+.industry-caution-note svg {
+  flex-shrink: 0;
+  margin-top: 1px;
+  color: #D97706;
+}
+
+/* ── CTA ─────────────────────────────────────────────────────── */
+.featured-industry-action {
+  margin-top: 0.5rem;
+}
+
+/* ============================================================
+   ADDITIONAL INDUSTRIES GRID (3-col → 2-col → 1-col)
+   ============================================================ */
+
+.additional-industries-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.75rem;
+  margin-bottom: 3.5rem;
+}
+
+/* ── Industry card ───────────────────────────────────────────── */
+.industry-card {
+  display: flex;
+  flex-direction: column;
+  background: var(--color-white);
+  border-radius: var(--radius-lg);
+  border: 1px solid rgba(58, 80, 107, 0.09);
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+  transition: box-shadow var(--transition-base), transform var(--transition-base);
+}
+
+.industry-card:hover {
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-3px);
+}
+
+.industry-card__img-wrap {
+  width: 100%;
+  height: 180px;
+  overflow: hidden;
+  background: var(--color-pale-blue-grey);
+  flex-shrink: 0;
+}
+
+.industry-card__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform var(--transition-slow);
+}
+
+.industry-card:hover .industry-card__img {
+  transform: scale(1.05);
+}
+
+.industry-card__body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 1.375rem 1.5rem 1.5rem;
+}
+
+.industry-card__header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.industry-card__icon {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-sm);
+  background: var(--color-pale-blue-grey);
+  color: var(--color-slate-blue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.industry-card__title {
+  font-family: var(--font-heading);
+  font-size: 1.0625rem;
+  font-weight: 700;
+  color: var(--color-dark-text);
+  letter-spacing: -0.01em;
+  line-height: 1.25;
+}
+
+.industry-card__desc {
+  font-size: 0.875rem;
+  color: var(--color-muted-grey);
+  line-height: 1.65;
+  margin-bottom: 1rem;
+}
+
+/* ── Product list inside card ───────────────────────────────── */
+.industry-card__products {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  flex: 1;
+}
+
+.industry-card__product-item {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.8125rem;
+  color: var(--color-muted-grey);
+  line-height: 1.4;
+}
+
+.industry-card__product-item svg {
+  color: var(--color-accent);
+  flex-shrink: 0;
+}
+
+/* ── Card footer: markets + CTA ─────────────────────────────── */
+.industry-card__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(58, 80, 107, 0.08);
+  flex-wrap: wrap;
+}
+
+.industry-markets-label {
+  font-family: var(--font-heading);
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--color-slate-blue);
+  opacity: 0.8;
+  line-height: 1.3;
+}
+
+/* ============================================================
+   UNLISTED INDUSTRY CALLOUT BOX
+   ============================================================ */
+
+.unlisted-box {
+  background: var(--color-white);
+  border-radius: var(--radius-xl);
+  border: 2px dashed rgba(58, 80, 107, 0.22);
+  padding: 2.75rem 3rem;
+  margin-top: 0.5rem;
+}
+
+.unlisted-box__inner {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.unlisted-box__icon-wrap {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: var(--color-pale-blue-grey);
+  color: var(--color-slate-blue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.unlisted-box__text {
+  flex: 1;
+}
+
+.unlisted-box__text h3 {
+  font-family: var(--font-heading);
+  font-size: clamp(1.125rem, 2vw, 1.375rem);
+  font-weight: 800;
+  color: var(--color-dark-text);
+  margin-bottom: 0.5rem;
+  letter-spacing: -0.01em;
+}
+
+.unlisted-box__text p {
+  font-size: 0.9375rem;
+  line-height: 1.65;
+  color: var(--color-muted-grey);
+  margin: 0;
+}
+
+.unlisted-box__cta {
+  flex-shrink: 0;
+}
+
+/* ============================================================
+   DISCLAIMER BOX
+   ============================================================ */
+
+.industry-disclaimer-box {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  max-width: 860px;
+  margin: 0 auto;
+  background: var(--color-light-bg);
+  border: 1px solid rgba(58, 80, 107, 0.1);
+  border-radius: var(--radius-md);
+  padding: 1.375rem 1.75rem;
+}
+
+.industry-disclaimer-box__icon {
+  color: var(--color-slate-blue);
+  flex-shrink: 0;
+  margin-top: 2px;
+  opacity: 0.7;
+}
+
+.industry-disclaimer-box p {
+  font-size: 0.875rem;
+  color: var(--color-muted-grey);
+  line-height: 1.65;
+  margin: 0;
+}
+
+/* ============================================================
+   RESPONSIVE BREAKPOINTS
+   ============================================================ */
+
+/* ── Tablet landscape / small desktop ─── */
+@media (max-width: 1024px) {
+  /* Featured rows: collapse to single column */
+  .featured-industry-row,
+  .featured-industry-row--reversed {
+    grid-template-columns: 1fr;
+    gap: 0;
+    padding: 0;
+    border: none;
+    box-shadow: none;
+    background: transparent;
+  }
+
+  .featured-industry-row--reversed .featured-industry-row__media {
+    order: 0;
+  }
+
+  .featured-industry-row--reversed .featured-industry-row__content {
+    order: 0;
+  }
+
+  .featured-industry-row__media {
+    height: 300px;
+    border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+  }
+
+  .featured-industry-row__content {
+    padding: 2rem 2rem 2.5rem;
+    border: 1px solid rgba(58, 80, 107, 0.11);
+    border-top: none;
+    border-radius: 0 0 var(--radius-lg) var(--radius-lg);
+    box-shadow: var(--shadow-sm);
+    background: var(--color-white);
+  }
+
+  /* Additional grid: 2 columns */
+  .additional-industries-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Unlisted box: stack vertically */
+  .unlisted-box__inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
+  }
+
+  .unlisted-box__cta {
+    align-self: flex-start;
+  }
+}
+
+/* ── Tablet portrait ─── */
+@media (max-width: 768px) {
+  /* Additional grid: single column */
+  .additional-industries-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .featured-industry-row__media {
+    height: 240px;
+  }
+
+  .featured-industry-row__content {
+    padding: 1.5rem 1.25rem 2rem;
+  }
+
+  .featured-products-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .unlisted-box {
+    padding: 2rem 1.5rem;
+  }
+
+  .industry-card__img-wrap {
+    height: 160px;
+  }
+}
+
+/* ── Mobile ─── */
+@media (max-width: 480px) {
+  .featured-industries-wrap {
+    gap: 2.5rem;
+  }
+
+  .featured-industry-row__media {
+    height: 200px;
+    border-radius: var(--radius-md) var(--radius-md) 0 0;
+  }
+
+  .featured-industry-row__content {
+    border-radius: 0 0 var(--radius-md) var(--radius-md);
+    padding: 1.25rem 1rem 1.75rem;
+  }
+
+  .featured-industry-icon {
+    width: 44px;
+    height: 44px;
+  }
+
+  .industry-card__footer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .unlisted-box {
+    padding: 1.75rem 1.25rem;
+    border-radius: var(--radius-lg);
+  }
+
+  .unlisted-box__icon-wrap {
+    width: 52px;
+    height: 52px;
+  }
+
+  .industry-disclaimer-box {
+    flex-direction: column;
+    gap: 0.75rem;
+    padding: 1.25rem;
+  }
+}
